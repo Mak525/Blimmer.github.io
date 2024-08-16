@@ -1,67 +1,47 @@
 body {
+    margin: 0;
+    padding: 0;
     font-family: Arial, sans-serif;
-    background-color: #f0f4f8;
-    color: #333;
+    background-color: #87ceeb;
+    overflow: hidden;
 }
 
-#app {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
+.game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh;
 }
 
-nav ul {
+.radar {
+    margin-top: 10px;
+    font-size: 24px;
+    color: white;
+}
+
+.plane-container {
+    flex-grow: 1;
+    position: relative;
+    width: 100%;
+    height: 60vh;
+    background: url('airport.jpg') no-repeat center center/cover;
+}
+
+.cockpit {
+    background-color: #222;
+    color: white;
+    padding: 10px;
+    width: 100%;
     display: flex;
     justify-content: space-around;
-    background-color: #1abc9c;
-    padding: 10px;
-    list-style-type: none;
-    border-radius: 5px;
+    font-size: 18px;
 }
 
-nav ul li {
+.plane {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: url('plane.png') no-repeat center center/cover;
     cursor: pointer;
-    color: white;
-    font-weight: bold;
-}
-
-.tab-content {
-    display: none;
-}
-
-.tab-content.active {
-    display: block;
-}
-
-#plane {
-    width: 100px;
-    display: block;
-    margin: 20px auto;
-}
-
-.hidden {
-    display: none;
-}
-
-button {
-    background-color: #1abc9c;
-    color: white;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #16a085;
-}
-
-h1 {
-    font-size: 1.5em;
-    color: #2c3e50;
-}
-
-h2 {
-    font-size: 1.2em;
-    color: #34495e;
 }
