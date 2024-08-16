@@ -1,67 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blimmer App</title>
+    <title>Гра-Тапалка Літаки</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="app">
-        <nav>
-            <ul>
-                <li data-tab="friends">Friends</li>
-                <li data-tab="home">Home</li>
-                <li data-tab="boost">Boost</li>
-                <li data-tab="earn">Earn</li>
-            </ul>
-        </nav>
-        <div id="content">
-            <div id="friends" class="tab-content">
-                <h1>Invite friends and get more BLMR</h1>
-                <img src="plane_logo.png" alt="Plane Logo">
-                <p>Number of friends: <span id="number-friends">0</span></p>
-                <ul id="friend-list">
-                    <!-- Friends list items will be generated here -->
-                </ul>
-                <button id="invite-friends">Invite friends</button>
-                <div id="invite-options" class="hidden">
-                    <button id="copy-link">Copy invite link</button>
-                    <button id="share-link">Share invite link</button>
-                </div>
-            </div>
-            <div id="home" class="tab-content hidden">
-                <p>Balance: <span id="balance">0</span> BLMR</p>
-                <ul>
-                    <li>Bronze - from 0</li>
-                    <li>Silver - from 25K</li>
-                    <li>Gold - from 100K</li>
-                    <li>Platinum - from 1M</li>
-                    <li>Diamond - from 5M</li>
-                    <li>Epic - from 10M</li>
-                    <li>Legendary - from 30M</li>
-                    <li>Master - from 50M</li>
-                </ul>
-                <img src="plane.png" id="plane" alt="Plane">
-                <p>Energy limit: <span id="energy">1500</span> / 1500</p>
-            </div>
-            <div id="boost" class="tab-content hidden">
-                <p>Balance: <span id="boost-balance">0</span> BLMR</p>
-                <h2>FREE BOOSTS</h2>
-                <p>Recharge energy limit: <span id="free-recharges">4</span></p>
-                <h2>UPGRADES</h2>
-                <p>TAP BOT - 200,000 BLMR (collects 133,000 BLMR every 4 hours)</p>
-                <p>MULTITAP - increases taps per click (cost scales with level)</p>
-                <p>ENERGY LIMIT - increases energy limit (cost scales with level)</p>
-                <p>RECHARGING SPEED - reduces recharge time (cost scales with level)</p>
-            </div>
-            <div id="earn" class="tab-content hidden">
-                <h2>Earn BLMR</h2>
-                <div>
-                    <p>1. Subscribe to the Telegram channel: <a href="https://t.me/BlimmerCoin" target="_blank">https://t.me/BlimmerCoin</a></p>
-                    <p>Reward: 300 BLMR</p>
-                </div>
-            </div>
+    <div class="game-container">
+        <div class="radar">Радар</div>
+        <div class="plane-container">
+            <!-- Літаки будуть додаватися сюди через JavaScript -->
+        </div>
+        <div class="cockpit">
+            <p>Паливо: <span id="fuel">100</span>%</p>
+            <p>Очки: <span id="score">0</span></p>
         </div>
     </div>
     <script src="app.js"></script>
